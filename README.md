@@ -1,1 +1,1 @@
-# 4xue
+# 4xue is a critical vulnerability in WSO2 Identity Server, an open-source identity and access management platform. The vulnerability allows remote attackers to upload malicious JSP files that can execute arbitrary commands on the target system with administrative privileges. The vulnerability is a file upload function issue that is exploited by bypassing the file extension validation mechanism. The vulnerability was assigned a CVSS score of 9.8, indicating its severity.
